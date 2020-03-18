@@ -1,16 +1,16 @@
 {
-  "name": "react-components-kit",
-  "version": "1.0.0",
+  "name": "react-components-storage",
+  "version": "1.0.1",
   "description": "Components hub",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/serhiibilous/react-components-kit"
+    "url": "https://github.com/serhiibilous/react-components-storage"
   },
   "bugs": {
-    "url": "https://github.com/serhiibilous/react-components-kit/issues"
+    "url": "https://github.com/serhiibilous/react-components-storage/issues"
   },
-  "homepage": "https://github.com/serhiibilous/react-components-kit#readme",
+  "homepage": "https://github.com/serhiibilous/react-components-storage#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
