@@ -2,21 +2,49 @@
   "name": "react-components-storage",
   "version": "1.0.1",
   "description": "Components hub",
-  "main": "src/index.js",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/serhiibilous/react-components-storage"
+    "url": "git+https://github.com/serhiibilous/react-components-storage"
   },
   "bugs": {
     "url": "https://github.com/serhiibilous/react-components-storage/issues"
   },
   "homepage": "https://github.com/serhiibilous/react-components-storage#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --out-file index.js"
   },
-  "author": "https://github.com/serhiibilous",
+  "author": "Serhii Bilous",
   "license": "ISC",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "react": "^16.13.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3"
   }
 }
