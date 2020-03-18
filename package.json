@@ -1,6 +1,6 @@
 {
   "name": "react-components-storage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Components hub",
   "main": "index.js",
   "babel": {
