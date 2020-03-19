@@ -1,23 +1,34 @@
 const path = require("path")
+const webpack = require('webpack')
 
 module.exports = {
-  mode: "production",
-  entry: "./src/index.js",
+  entry: './src/index.js',
+  devtool: 'source-map',
   output: {
-    path: path.resolve("build"),
-    filename: "index.js",
-    libraryTarget: "commonjs2"
+    path: path.join(__dirname, 'dist'),
+    library: 'ReactComponentsStorage',
+    libraryTarget: 'umd'
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
   },
   module: {
     rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
       {
-        test: /\.css$/,
-        loader: "style-loader!css-loader"
+        test: /\.jsx?$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
       }
     ]
   },
-  externals: {
-    react: "react"
-  }
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    })
+  ]
 }
